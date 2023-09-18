@@ -1,9 +1,10 @@
 import './App.css';
+import Header from './App/Components/Header.jsx';
 
 function App() {
     return (
         <>
-            <p>Hello Examen Project</p>
+            <Header />
         </>
     );
 }
