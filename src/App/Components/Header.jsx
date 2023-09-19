@@ -7,8 +7,8 @@ const Header = () => {
     let [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <div className="fixed w-full pt-5">
-                <nav className="font-mulish w-full flex flex-col items-center md:flex-row md:justify-around md:border-main-shadow md:border-t-2 pt-4">
+            <div className="fixed w-full md:pt-5">
+                <nav className="bg-main-white font-mulish w-full flex flex-col items-center md:flex-row md:justify-around md:border-main-shadow md:border-t-2 pt-4">
                     <div className="w-44 flex justify-center">
                         <img src={Logo} alt="logo" className="w-fit" />
                     </div>
@@ -52,7 +52,7 @@ const Header = () => {
                                 <span className="hidden md:block bottom-14 absolute left-0 w-0 h-0.5 bg-main-green transition-all duration-300 origin-left group-hover:w-full" />
                             </a>
                         </li>
-                        <li className="relative group pt-5 md:pt-0">
+                        <li className="relative group pt-5 md:pt-0 border-b-main-green">
                             <a
                                 href="#"
                                 className="hover:text-main-green ransition-all duration-300"
@@ -66,7 +66,7 @@ const Header = () => {
                         <img
                             src={Login}
                             alt="login"
-                            className="w-14 cursor-pointer mt-5 md:m-0 transition duration-300 ease-in-out hover:rotate-12 hover:scale-110 hover:border-2 rounded-full border-main-green"
+                            className="w-14 cursor-pointer mt-5 md:m-0 transition duration-300 ease-in-out hover:rotate-small hover:scale-110 hover:border-2 rounded-full border-main-green"
                         />
                     </div>
                 </nav>
