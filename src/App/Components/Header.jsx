@@ -7,8 +7,8 @@ const Header = () => {
     let [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <div className="fixed w-full md:pt-5">
-                <nav className="bg-main-white font-mulish w-full flex flex-col items-center md:flex-row md:justify-around md:border-main-shadow md:border-t-2 pt-4">
+            <div className="fixed w-full md:pt-5 bg-main-white h-28">
+                <nav className="pb-5 md:pb-0 bg-main-white font-mulish w-full flex flex-col items-center md:flex-row md:justify-around md:border-main-shadow md:border-t-2 pt-4">
                     <div className="w-44 flex justify-center">
                         <img src={Logo} alt="logo" className="w-fit" />
                     </div>
@@ -21,8 +21,8 @@ const Header = () => {
                     </div>
                     {/* nav links here */}
                     <ul
-                        className={`text-xl md:text-base flex flex-col items-center mt-32 md:mt-0 md:flex md:p-0 md:static md:flex-row md:gap-20 absolute md:z-auto z-[-1] transition-all duration-500 ease-in-out ${
-                            isOpen ? 'top-7' : 'top-[-400px]'
+                        className={` bg-main-white w-full md:w-auto text-xl md:text-base flex flex-col items-center mt-32 md:mt-0 md:flex md:p-0 md:static md:flex-row md:gap-20 absolute md:z-auto z-[-1] transition-all duration-500 ease-in-out ${
+                            isOpen ? 'top-0 pb-5' : 'top-[-400px]'
                         }`}
                     >
                         <li className="relative group pt-5 md:pt-0">
