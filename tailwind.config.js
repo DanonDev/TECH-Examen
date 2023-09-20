@@ -26,7 +26,7 @@ export default {
             spacing: {
                 'section-w-desc': '500px',
                 'section-h-desc': '190px',
-                'section-mt-desc': '455px',
+                'section-mt-desc': '566px',
                 'section-mt-mob': '370px',
                 'section-w-mobl': '23rem',
                 'section-h-mobl': '9rem',

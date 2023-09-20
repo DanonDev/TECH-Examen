@@ -24,8 +24,11 @@ const Home = () => {
                 <div className="p-10 mt-20 flex flex-col md:flex-row text-main-dark-green">
                     <div className="flex flex-col md:justify-center md:pr-40">
                         <h1 className="text-4xl md:text-5xl md:pb-7">
-                            Her din guide til<br></br>
-                            sortering
+                            Her{' '}
+                            <span className="selection:bg-main-light-green">
+                                din guide til<br></br>
+                                sortering
+                            </span>
                         </h1>
                         <p className="py-5 text-xl max-w-lg">
                             Her kan du se hvordan du skal sortere og hvad der

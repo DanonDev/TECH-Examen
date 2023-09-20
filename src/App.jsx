@@ -8,8 +8,10 @@ function App() {
     return (
         <>
             <Header />
-            <PagesRouter />
-            <Wave />
+            <div className="flex flex-col min-h-full">
+                <PagesRouter />
+                <Wave />
+            </div>
             <Footer />
         </>
     );
