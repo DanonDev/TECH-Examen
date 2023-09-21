@@ -4,7 +4,9 @@ export default {
     theme: {
         colors: {
             'main-white': '#FFFFFF',
-            'main-gary': '#707070',
+            'main-gray': '#707070',
+            'main-dark-gray': '#414141',
+            'main-light-gray': '#F8F8F8',
             'main-dark-green': '#114D46',
             'text-green': '#0E4F2D',
             'main-green': '#62BB65',
@@ -31,6 +33,7 @@ export default {
                 'section-mt-mob': '485px',
                 'section-w-mobl': '23rem',
                 'section-h-mobl': '9rem',
+                'container-sort': '39rem',
             },
         },
     },

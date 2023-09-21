@@ -57,13 +57,13 @@ const Login = () => {
                                 type="email"
                                 id="username"
                                 placeholder="E-mail"
-                                className="p-4 border-2 border-main-gary border-opacity-20 rounded-3xl outline-main-green"
+                                className="p-4 border-2 border-main-gray border-opacity-20 rounded-3xl outline-main-green"
                             />
                             <input
                                 type="password"
                                 id="password"
                                 placeholder="Password"
-                                className="p-4 border-2 border-main-gary border-opacity-20 rounded-3xl outline-main-green"
+                                className="p-4 border-2 border-main-gray border-opacity-20 rounded-3xl outline-main-green"
                             />
                             {message && <div>{message}</div>}
                             <div className="flex justify-center">
