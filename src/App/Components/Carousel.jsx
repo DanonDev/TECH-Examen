@@ -15,24 +15,26 @@ const settings = {
 
 const Carousel = () => {
     return (
-        <Slider {...settings}>
-            <img
-                className="w-full h-slider-mob md:h-slider-desc object-cover"
-                src={Slider1}
-                alt="Slide 1"
-            />
-            <img
-                className="w-full h-slider-mob md:h-slider-desc object-cover"
-                src={Slider2}
-                alt="Slide 2"
-            />
+        <div className="overflow-hidden">
+            <Slider {...settings}>
+                <img
+                    className="h-slider-mob md:h-slider-desc object-cover"
+                    src={Slider1}
+                    alt="Slide 1"
+                />
+                <img
+                    className="h-slider-mob md:h-slider-desc object-cover"
+                    src={Slider2}
+                    alt="Slide 2"
+                />
 
-            <img
-                className="w-full h-slider-mob md:h-slider-desc object-cover"
-                src={Slider3}
-                alt="Slide 3"
-            />
-        </Slider>
+                <img
+                    className="h-slider-mob md:h-slider-desc object-cover"
+                    src={Slider3}
+                    alt="Slide 3"
+                />
+            </Slider>
+        </div>
     );
 };
 

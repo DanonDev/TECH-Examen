@@ -22,7 +22,7 @@ const Header = () => {
                     </div>
                     {/* nav links here */}
                     <ul
-                        className={` bg-main-white w-full md:w-auto text-xl md:text-base flex flex-col items-center mt-32 md:mt-0 md:flex md:p-0 md:static md:flex-row md:gap-20 absolute md:z-auto z-[-1] transition-all duration-500 ease-in-out shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:shadow-none ${
+                        className={` bg-main-white w-full md:w-auto text-xl md:text-lg flex flex-col items-center mt-32 md:-mt-1 md:flex md:p-0 md:static md:flex-row md:gap-20 absolute md:z-auto z-[-1] transition-all duration-500 ease-in-out shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:shadow-none ${
                             isOpen ? 'top-5 pb-5' : 'top-[-400px]'
                         }`}
                     >
@@ -63,15 +63,15 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div className="w-44 flex justify-center">
-                        <Link to="/login">
+                    <Link to="/login">
+                        <div className="w-44 flex justify-center">
                             <img
                                 src={Login}
                                 alt="login"
                                 className="w-14 cursor-pointer mt-5 md:m-0 transition duration-300 ease-in-out hover:rotate-small hover:scale-110 hover:border-2 rounded-full border-main-green"
                             />
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                 </nav>
             </div>
         </div>

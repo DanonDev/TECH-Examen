@@ -1,14 +1,14 @@
-// import Slider1 from '../../Assets/sliderImages/slider1.jpg';
 import HomeOne from '../../Assets/homeImages/trashbin.png';
 import HomeTwo from '../../Assets/homeImages/baskets.png';
 import Carousel from '../Components/Carousel';
+import Wave from '../Components/Wave';
 
 const Home = () => {
     return (
         <div className="font-mulish">
             <Carousel />
             <div className="text-md rounded-xl left-0 right-0 mr-auto ml-auto top-0 mt-section-mt-mob md:mt-section-mt-desc w-section-w-mobl h-section-h-mobl md:w-section-w-desc md:h-section-h-desc absolute flex-col text-center bg-main-light-green shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                <p className=" text-xl md:text-2xl pb-5 md:pb-7 mt-5 md:pt-5">
+                <p className="text-main-dark-green text-xl md:text-2xl pb-5 md:pb-7 mt-5 md:pt-5">
                     Find og anmeld genbrugsstationer
                 </p>
                 <div className="flex w-full items-center md:flex-row justify-center gap-5">
@@ -77,6 +77,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <Wave />
         </div>
     );
 };

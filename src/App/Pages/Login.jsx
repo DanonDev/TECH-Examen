@@ -2,6 +2,7 @@ import axios from 'axios';
 import LogoIcon from '../../Assets/logoIcon.svg';
 import { useAuth } from '../Components/Authenticator.jsx';
 import { useState } from 'react';
+import Wave from '../Components/Wave';
 
 const Login = () => {
     const { loginData, setLoginData } = useAuth();
@@ -48,26 +49,28 @@ const Login = () => {
                 </div>
                 {!loginData && !loginData.username ? (
                     <div>
-                        <form className="flex flex-col text-center md:text-start gap-5 w-96 ">
-                            <h1 className="text-4xl">Log ind</h1>
+                        <form className="flex flex-col text-center text-lg md:text-start gap-5 w-96 ">
+                            <h1 className="text-4xl text-main-dark-green">
+                                Log ind
+                            </h1>
                             <input
                                 type="email"
                                 id="username"
                                 placeholder="E-mail"
-                                className="p-5 border-2 border-main-gary border-opacity-20 rounded-3xl outline-none"
+                                className="p-4 border-2 border-main-gary border-opacity-20 rounded-3xl outline-main-green"
                             />
                             <input
                                 type="password"
                                 id="password"
                                 placeholder="Password"
-                                className="p-5 border-2 border-main-gary border-opacity-20 rounded-3xl outline-none"
+                                className="p-4 border-2 border-main-gary border-opacity-20 rounded-3xl outline-main-green"
                             />
                             {message && <div>{message}</div>}
                             <div className="flex justify-center">
                                 <button
                                     type="button"
                                     onClick={AuthRequest}
-                                    className="text-xl text-main-white bg-main-dark-green p-3 mb-10 w-44 rounded-xl"
+                                    className="text-xl text-main-white bg-main-dark-green p-3 mb-10 w-44 rounded-xl transition-all duration-300 ease-in-out hover:scale-110 hover:font-bold"
                                 >
                                     Log ind
                                 </button>
@@ -82,13 +85,14 @@ const Login = () => {
                         </p>
                         <button
                             onClick={logOut}
-                            className="mt-10 text-xl text-main-white bg-main-dark-green p-3 w-44 rounded-xl"
+                            className="mt-10 text-xl text-main-white bg-main-dark-green p-3 w-44 rounded-xl transition-all duration-300 ease-in-out hover:scale-110 hover:font-bold"
                         >
                             Log ud
                         </button>
                     </div>
                 )}
             </div>
+            <Wave />
         </>
     );
 };
