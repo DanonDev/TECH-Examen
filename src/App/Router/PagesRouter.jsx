@@ -4,6 +4,7 @@ import Sorting from '../Pages/Sorting.jsx';
 import RecyclingStations from '../Pages/RecyclingStations.jsx';
 import Order from '../Pages/Order.jsx';
 import Login from '../Pages/Login.jsx';
+import SortigDetails from '../Pages/SortingDetails.jsx';
 import { useEffect } from 'react';
 
 // Add default position "OnTop" when switching between pages
@@ -21,6 +22,7 @@ const PagesRouter = () => {
         <Routes>
             <Route index element={<Home />} />
             <Route path="/sortering" element={<Sorting />} />
+            <Route path="/section/:section_id" element={<SortigDetails />} />
             <Route path="/genbrugsstationer" element={<RecyclingStations />} />
             <Route path="/bestil" element={<Order />} />
             <Route path="/login" element={<Login />} />
