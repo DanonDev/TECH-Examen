@@ -1,3 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active {
+    color: #62bb65;
+}
+
+#root {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
