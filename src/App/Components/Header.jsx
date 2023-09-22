@@ -1,6 +1,6 @@
 import Logo from '../../Assets/logo.png';
 import Login from '../../Assets/login.png';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
@@ -27,40 +27,40 @@ const Header = () => {
                         }`}
                     >
                         <li className="relative group pt-5 md:pt-0">
-                            <Link
+                            <NavLink
                                 to="/"
                                 className="hover:text-main-green ransition-all duration-300"
                             >
                                 Forside
                                 <span className="hidden md:block bottom-14 absolute left-0 w-0 h-0.5 bg-main-green transition-all duration-300 origin-left group-hover:w-full" />
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="relative group pt-5 md:pt-0">
-                            <Link
+                            <NavLink
                                 to="/sortering"
                                 className="hover:text-main-green ransition-all duration-300"
                             >
                                 Sortering
                                 <span className="hidden md:block bottom-14 absolute left-0 w-0 h-0.5 bg-main-green transition-all duration-300 origin-left group-hover:w-full" />
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="relative group pt-5 md:pt-0">
-                            <Link
+                            <NavLink
                                 to="/genbrugsstationer"
                                 className="hover:text-main-green ransition-all duration-300"
                             >
                                 Genbrugsstationer
                                 <span className="hidden md:block bottom-14 absolute left-0 w-0 h-0.5 bg-main-green transition-all duration-300 origin-left group-hover:w-full" />
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="relative group pt-5 md:pt-0 border-b-main-green">
-                            <Link
+                            <NavLink
                                 to="/bestil"
                                 className="hover:text-main-green ransition-all duration-300"
                             >
                                 Bestil beholder
                                 <span className="hidden md:block bottom-14 absolute left-0 w-0 h-0.5 bg-main-green transition-all duration-300 origin-left group-hover:w-full" />
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                     <Link to="/login">

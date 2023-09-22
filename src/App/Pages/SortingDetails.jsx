@@ -45,26 +45,40 @@ const SortigDetails = () => {
                             </p>
                             {sectionDetails.categories &&
                                 sectionDetails.categories.map((category) => (
-                                    <div
-                                        key={category.id}
-                                        className="flex justify-center md:justify-between text-2xl text-main-dark-gray font-extrabold py-10 px-7 my-20 bg-main-light-gray rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
-                                    >
-                                        <div className="flex flex-col md:flex-row items-center">
-                                            <img
-                                                src={category.icon_filepath}
-                                                alt={category.icon_filename}
-                                                className="w-32 rounded-3xl"
-                                            />
-                                            <h2 className="pt-5 md:pt-0 md:pl-10">
-                                                {category.title}
-                                            </h2>
-                                        </div>
-                                        <img
-                                            src={category.image_filepath}
-                                            alt={category.image_filename}
-                                            className="w-32 rounded-3xl hidden md:block"
-                                        />
-                                    </div>
+                                    <>
+                                        <Link
+                                            to={`/category/details/${category.id}`}
+                                        >
+                                            <div
+                                                key={category.id}
+                                                className="flex justify-center md:justify-between text-2xl text-main-dark-gray font-extrabold py-10 px-7 my-20 bg-main-light-gray rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+                                            >
+                                                <div className="flex flex-col md:flex-row items-center">
+                                                    <img
+                                                        src={
+                                                            category.icon_filepath
+                                                        }
+                                                        alt={
+                                                            category.icon_filename
+                                                        }
+                                                        className="w-32 rounded-3xl"
+                                                    />
+                                                    <h2 className="pt-5 md:pt-0 md:pl-10">
+                                                        {category.title}
+                                                    </h2>
+                                                </div>
+                                                <img
+                                                    src={
+                                                        category.image_filepath
+                                                    }
+                                                    alt={
+                                                        category.image_filename
+                                                    }
+                                                    className="w-32 rounded-3xl hidden md:block"
+                                                />
+                                            </div>
+                                        </Link>
+                                    </>
                                 ))}
                         </div>
                     </div>

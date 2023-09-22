@@ -33,26 +33,23 @@ const Sorting = () => {
                 />
             </div>
             <div className="max-w-screen-2xl flex flex-wrap gap-10 justify-center pb-10">
-                {data.map((section) => (
+                {data.map((item) => (
                     <>
-                        <Link to={`/section/${section.id}`}>
-                            <div
-                                key={section.id}
-                                className="text-center rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:scale-110 hover:font-bold cursor-pointer"
-                            >
+                        <Link to={`/section/${item.id}`} key={item.id}>
+                            <div className="text-center rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:scale-110 hover:font-bold cursor-pointer">
                                 <img
                                     className="w-52 rounded-t-2xl object-cover"
-                                    src={section.filepath}
-                                    alt={section.filename}
+                                    src={item.filepath}
+                                    alt={item.filename}
                                 />
                                 <div
                                     className="rounded-b-2xl h-10 text-center"
                                     style={{
-                                        backgroundColor: `#${section.color}`,
+                                        backgroundColor: `#${item.color}`,
                                     }}
                                 >
                                     <p className="pt-1.5 text-main-white text-xl">
-                                        {section.title}
+                                        {item.title}
                                     </p>
                                 </div>
                             </div>

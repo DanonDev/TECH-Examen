@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.active {
+    color: #62bb65;
+}
+
 #root {
     min-height: 100vh;
     scroll-behavior: smooth;
