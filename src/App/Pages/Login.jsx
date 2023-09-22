@@ -3,6 +3,7 @@ import LogoIcon from '../../Assets/logoIcon.svg';
 import { useAuth } from '../Components/Authenticator.jsx';
 import { useState } from 'react';
 import Wave from '../Components/Wave';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 
 const Login = () => {
     const { loginData, setLoginData } = useAuth();
@@ -37,6 +38,8 @@ const Login = () => {
         setLoginData('');
     };
 
+    const [visible, setVisible] = useState(false);
+
     return (
         <>
             <div className="font-mulish w-full flex flex-col md:flex-row justify-center items-center mt-16 md:h-72 md:mt-44">
@@ -59,12 +62,25 @@ const Login = () => {
                                 placeholder="E-mail"
                                 className="p-4 border-2 border-main-gray border-opacity-20 rounded-3xl outline-main-green"
                             />
-                            <input
-                                type="password"
-                                id="password"
-                                placeholder="Password"
-                                className="p-4 border-2 border-main-gray border-opacity-20 rounded-3xl outline-main-green"
-                            />
+                            <div className=" relative">
+                                <input
+                                    type={visible ? 'text' : 'password'}
+                                    id="password"
+                                    placeholder="Password"
+                                    className="w-full p-4 border-2 border-main-gray border-opacity-20 rounded-3xl outline-main-green"
+                                />
+                                <div
+                                    onClick={() => setVisible(!visible)}
+                                    className="w-8 absolute top-4 right-5 cursor-pointer"
+                                >
+                                    {' '}
+                                    {visible ? (
+                                        <EyeIcon className="text-main-dark-green" />
+                                    ) : (
+                                        <EyeSlashIcon className="text-main-dark-green" />
+                                    )}
+                                </div>
+                            </div>
                             {message && <div>{message}</div>}
                             <div className="flex justify-center">
                                 <button
