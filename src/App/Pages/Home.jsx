@@ -2,6 +2,7 @@ import HomeOne from '../../Assets/homeImages/trashbin.png';
 import HomeTwo from '../../Assets/homeImages/baskets.png';
 import Carousel from '../Components/Carousel';
 import Wave from '../Components/Wave';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -12,12 +13,16 @@ const Home = () => {
                     Find og anmeld genbrugsstationer
                 </p>
                 <div className="flex w-full items-center md:flex-row justify-center gap-5">
-                    <button className="w-32 md:w-40 h-12 bg-main-dark-green rounded-md text-main-white transition duration-300 ease-out hover:scale-110 hover:font-bold">
-                        Find station
-                    </button>
-                    <button className="w-32 md:w-40 h-12 bg-main-dark-green rounded-md text-main-white transition-all duration-300 ease-out hover:scale-110 hover:font-bold">
-                        Log ind
-                    </button>
+                    <Link to="/genbrugsstationer">
+                        <button className="w-32 md:w-40 h-12 bg-main-dark-green rounded-md text-main-white transition duration-300 ease-out hover:scale-110 hover:font-bold">
+                            Find station
+                        </button>
+                    </Link>
+                    <Link to="/login">
+                        <button className="w-32 md:w-40 h-12 bg-main-dark-green rounded-md text-main-white transition-all duration-300 ease-out hover:scale-110 hover:font-bold">
+                            Log ind
+                        </button>
+                    </Link>
                 </div>
             </div>
             <section className="flex flex-col items-center">
@@ -36,12 +41,14 @@ const Home = () => {
                             til, hvordan du gør det nemt at sortere hjemme hos
                             dig.
                         </p>
-                        <div className="flex flex-row pt-5 pb-10 gap-5 text-lg">
+                        <div className="w-full flex flex-row pt-5 pb-10 gap-5 text-lg">
                             <button className="bg-main-dark-green h-16 text-main-white rounded-md w-full transition-all duration-200 ease-in-out hover:font-bold">
-                                Se affaldsguide
+                                <Link to="/sortering">Se affaldsguide</Link>
                             </button>
                             <button className="text-main-green border border-main-green rounded-md w-full transition-all duration-200 ease-in-out hover:font-bold">
-                                Bestil storskrald
+                                <Link className="/bestil">
+                                    Bestil storskrald
+                                </Link>
                             </button>
                         </div>
                     </div>
@@ -71,9 +78,11 @@ const Home = () => {
                             bestille dens levering direkte til din hjemmeadresse
                             !
                         </p>
-                        <button className="text-xl bg-main-dark-green h-16 text-main-white rounded-md w-full md:w-44 md:mt-5 transition-all duration-200 ease-in-out hover:font-bold">
-                            Bestil nu
-                        </button>
+                        <Link to="/bestil">
+                            <button className="text-xl bg-main-dark-green h-16 text-main-white rounded-md w-full md:w-44 md:mt-5 transition-all duration-200 ease-in-out hover:font-bold">
+                                Bestil nu
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>
