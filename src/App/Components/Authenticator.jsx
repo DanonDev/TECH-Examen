@@ -2,16 +2,16 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const Authenticator = createContext();
 
+// eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
     const [loginData, setLoginData] = useState('');
 
     useEffect(() => {
-        // Initialize the loginData from sessionStorage only once when the component mounts
         const storedToken = sessionStorage.getItem('token');
         if (storedToken) {
             setLoginData(JSON.parse(storedToken));
         }
-    }, []); // Empty dependency array ensures this effect runs only on mount
+    }, [children]);
 
     return (
         <Authenticator.Provider value={{ loginData, setLoginData }}>
@@ -22,4 +22,5 @@ const AuthProvider = ({ children }) => {
 
 const useAuth = () => useContext(Authenticator);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { Authenticator, AuthProvider, useAuth };

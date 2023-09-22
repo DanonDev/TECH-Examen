@@ -30,7 +30,7 @@ const RecyclingStations = () => {
     return (
         <>
             <div className="w-full font-mulish bg-gradient-to-b from-main-light-green flex justify-center pt-20 pb-20">
-                <div className="grid grid-cols-3 gap-40 gap-y-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap:20 md:gap-40 gap-y-20">
                     {station.map((item, index) => (
                         <>
                             <Link to={`/orgs/${item.id}`}>

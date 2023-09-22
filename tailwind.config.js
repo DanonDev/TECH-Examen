@@ -5,6 +5,7 @@ export default {
         colors: {
             'main-white': '#FFFFFF',
             'main-gray': '#707070',
+            'bag-gray': '#DCDCDC',
             'main-dark-gray': '#414141',
             'main-light-gray': '#F8F8F8',
             'main-dark-green': '#114D46',
@@ -35,6 +36,7 @@ export default {
                 'section-w-mobl': '23rem',
                 'section-h-mobl': '9rem',
                 'container-sort': '39rem',
+                // 'custom-map': '300px',
             },
         },
     },
