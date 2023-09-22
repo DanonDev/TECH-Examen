@@ -8,6 +8,7 @@ export default {
             'main-dark-gray': '#414141',
             'main-light-gray': '#F8F8F8',
             'main-dark-green': '#114D46',
+            'text-red': '#952121',
             'text-green': '#0E4F2D',
             'main-green': '#62BB65',
             'main-black': '#000000',

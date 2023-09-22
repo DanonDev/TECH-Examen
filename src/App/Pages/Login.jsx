@@ -79,10 +79,7 @@ const Login = () => {
                     </div>
                 ) : (
                     <div className="flex flex-col items-center">
-                        <p className="text-5xl pr-2">
-                            Du er logget ind !
-                            {/* {`${loginData.firstname} ${loginData.lastname} `} */}
-                        </p>
+                        <p className="text-5xl pr-2">Du er logget ind !</p>
                         <button
                             onClick={logOut}
                             className="mt-10 text-xl text-main-white bg-main-dark-green p-3 w-44 rounded-xl transition-all duration-300 ease-in-out hover:scale-110 hover:font-bold"

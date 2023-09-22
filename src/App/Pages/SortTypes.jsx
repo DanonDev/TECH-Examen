@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SortigTypes = () => {
     const { category_id } = useParams();
@@ -20,22 +21,49 @@ const SortigTypes = () => {
         getData();
     }, [category_id]);
 
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    };
+
     return (
-        <>
+        <div className="w-full flex-col px-10 md:px-20 py-20">
             {detailTypes.types &&
                 detailTypes.types.map((type) => (
-                    <li key={type.id}>
-                        <h2>{type.title}</h2>
-                        <p>
-                            Is Allowed: {type.rules.is_allowed ? 'Yes' : 'No'}
-                        </p>
-                        <p>
-                            Is Station: {type.rules.is_station ? 'Yes' : 'No'}
-                        </p>
-                        <p>Is Home: {type.rules.is_home ? 'Yes' : 'No'}</p>
-                    </li>
+                    <div
+                        key={type.id}
+                        className="font-mulish text-xl md:text-2xl"
+                    >
+                        <div>
+                            {type.rules.is_allowed ? (
+                                <div>
+                                    <p>
+                                        Vi modtager på genbrugsstationen:{' '}
+                                        <span className="font-extrabold text-main-green">
+                                            {type.title}
+                                        </span>
+                                    </p>
+                                </div>
+                            ) : (
+                                <div>
+                                    <p>
+                                        Modtager ikke / ikke-godkendte type:{' '}
+                                        <span className="font-extrabold text-text-red">
+                                            {type.title}
+                                        </span>
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 ))}
-        </>
+            <button
+                onClick={goBack}
+                className="text-xl mt-10 text-main-white bg-main-dark-green p-3 w-44 rounded-xl transition-all duration-300 ease-in-out hover:scale-110 hover:font-bold"
+            >
+                Tilbage
+            </button>
+        </div>
     );
 };
 
