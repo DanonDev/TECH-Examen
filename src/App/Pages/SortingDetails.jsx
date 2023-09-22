@@ -51,7 +51,7 @@ const SortigDetails = () => {
                                         >
                                             <div
                                                 key={category.id}
-                                                className="flex justify-center md:justify-between text-2xl text-main-dark-gray font-extrabold py-10 px-7 my-20 bg-main-light-gray rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+                                                className="flex justify-center md:justify-between text-2xl text-main-dark-gray font-extrabold py-10 px-7 my-20 bg-main-light-gray rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:scale-105"
                                             >
                                                 <div className="flex flex-col md:flex-row items-center">
                                                     <img
