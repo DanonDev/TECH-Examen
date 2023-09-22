@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Wave from '../Components/Wave.jsx';
 import Image1 from '../../Assets/googleMaps/OsterUttrupVej.png';
@@ -32,25 +33,27 @@ const RecyclingStations = () => {
                 <div className="grid grid-cols-3 gap-40 gap-y-20">
                     {station.map((item, index) => (
                         <>
-                            <div className="w-72 rounded-lg bg-main-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-text-green transition-all decoration-300 ease-in-out hover:scale-110">
-                                <img
-                                    className="rounded-t-lg"
-                                    src={images[index]}
-                                    alt={item.title}
-                                />
-                                <div
-                                    key={item.id}
-                                    className="text-lg text-center pt-2 bg-main-white rounded-b-lg"
-                                >
-                                    <p>{item.address}</p>
-                                    <p className="font-extrabold text-xl ml-2 mr-2 text-main-dark-green">
-                                        {item.name}
-                                    </p>
-                                    <p className="pb-7">
-                                        {item.zipcode} {item.city}
-                                    </p>
+                            <Link to={`/orgs/${item.id}`}>
+                                <div className="w-72 rounded-lg bg-main-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-text-green transition-all decoration-300 ease-in-out hover:scale-110 cursor-pointer">
+                                    <img
+                                        className="rounded-t-lg"
+                                        src={images[index]}
+                                        alt={item.title}
+                                    />
+                                    <div
+                                        key={item.id}
+                                        className="text-lg text-center pt-2 bg-main-white rounded-b-lg"
+                                    >
+                                        <p>{item.address}</p>
+                                        <p className="font-extrabold text-xl ml-2 mr-2 text-main-dark-green">
+                                            {item.name}
+                                        </p>
+                                        <p className="pb-7">
+                                            {item.zipcode} {item.city}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </>
                     ))}
                 </div>
