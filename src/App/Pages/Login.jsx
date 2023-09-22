@@ -22,7 +22,7 @@ const Login = () => {
             );
             sessionData(result.data);
         } catch (err) {
-            setMessage('Kunne ikke logge ind !');
+            setMessage('Du skal indsætte dit email og password !');
         }
     };
 
